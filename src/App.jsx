@@ -99,7 +99,7 @@ function App() {
                 <div className="col-lg-12 col-12 order-2 order-lg-1">
                     <section className="hero" style={{ width: '100%' }}>
                         <div className="hero-content" style={{ width: '100%' }}>
-                            <h1 className="hero-huge-heading">Online Dispute Resoluion Center</h1>
+                            <h1 className="hero-huge-heading">Online Dispute Resolution Center</h1>
 
                             <p className="hero-bright-subtitle">
                                 Utkrusht Kalashrest Vibad Samadhan
@@ -114,16 +114,13 @@ function App() {
 
                             </p>
 
-                            <div className="hero-buttons " style={{ marginTop: '31%' }}>
+                            <div className="hero-buttons mt-5">
                                 <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
                                     <button className="hero-custom-btn">
                                         Initiate Dispute Resolution
                                     </button>
                                 </a>
 
-                                {/* <button className="btn-secondary">
-                                    Learn More
-                                </button> */}
                             </div>
                         </div>
 
