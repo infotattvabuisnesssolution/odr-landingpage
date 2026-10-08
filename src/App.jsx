@@ -52,6 +52,10 @@ function App() {
                             <a className="nav-link" href="#knowledge">Knowledge</a>
                         </li>
 
+                        {/* Language Switcher */}
+                        <li className="nav-item d-flex align-items-center mx-2" id="google_translate_element">
+                        </li>
+
                         <li className="nav-item">
                             <a className="btn rounded-pill px-4" href="#cta" style={{ backgroundColor: 'white' }}>
                                 Connect
