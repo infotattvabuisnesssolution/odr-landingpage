@@ -2,13 +2,11 @@ import React, { useEffect } from "react";
 import "./Style.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // Add simple GSAP animation to hero
     gsap.from(".hero-content", { opacity: 0, y: 50, duration: 1, delay: 0.2 });
     gsap.from(".why-card", { opacity: 0, y: 30, duration: 0.8, stagger: 0.2, scrollTrigger: ".why-choose" });
   }, []);
@@ -54,19 +52,8 @@ function App() {
                             <a className="nav-link" href="#knowledge">Knowledge</a>
                         </li>
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i className="bi bi-globe"></i> Language
-                            </a>
-                            <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                                <li><a className="dropdown-item" href="#" onClick={(event) => window.changeLanguage && window.changeLanguage(event, 'en', 'English')}>English</a></li>
-                                <li><a className="dropdown-item" href="#" onClick={(event) => window.changeLanguage && window.changeLanguage(event, 'or', 'ଓଡ଼ିଆ (Odia)')}>ଓଡ଼ିଆ (Odia)</a></li>
-                                <li><a className="dropdown-item" href="#" onClick={(event) => window.changeLanguage && window.changeLanguage(event, 'hi', 'हिंदी (Hindi)')}>हिंदी (Hindi)</a></li>
-                            </ul>
-                        </li>
-
                         <li className="nav-item">
-                            <a id="initiate-odr-link" className="btn rounded-pill px-4" href="https://odr.gokulanandachaudhurifoundation.com/login" style={{ backgroundColor: 'white', color: 'black', fontWeight: '500' }}>
+                            <a className="btn rounded-pill px-4" href="#cta" style={{ backgroundColor: 'white' }}>
                                 Connect
                             </a>
                         </li>
@@ -87,7 +74,7 @@ function App() {
             <div className="row align-items-center">
 
                 {/* Background Video */}
-                <video className="bg-video" autoPlay muted loop playsInline>
+                <video className="bg-video" autoplay muted loop playsinline>
                     <source src="assets/Video Project 3.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -99,11 +86,11 @@ function App() {
                 <div className="col-lg-12 col-12 order-2 order-lg-1">
                     <section className="hero" style={{ width: '100%' }}>
                         <div className="hero-content" style={{ width: '100%' }}>
-                            <p className="hero-subtitle">
+                            <p className="hero-bright-subtitle">
                                 Utkrusht Kalashrest Vibad Samadhan
                             </p>
 
-                            <div className="hero-buttons " style={{ marginTop: '31%' }}>
+                            <div className="hero-buttons" style={{ marginTop: '31%' }}>
                                 <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
                                     <button className="hero-custom-btn">
                                         Initiate Dispute Resolution
@@ -199,20 +186,11 @@ function App() {
 
 
     {/* GOALS SECTION */}
-    <motion.section 
-        className="goals" 
-        id="goals"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-    >
+    <section className="goals" id="goals">
         <div className="goals-container">
             <h2 className="section-title">Our Goals & Vision</h2>
             <div className="goals-grid">
-
-                <img src="assets/1.png" style={{ width: '100%' }} alt="" />
-                {/* <div className="goal-item">
+                <div className="goal-item">
                     <h4>📋 Making ADR Accessible</h4>
                     <p>Making ADR processes more accessible and transparent to the public through innovative technology.
                     </p>
@@ -246,10 +224,10 @@ function App() {
                     <h4>📈 International Ready</h4>
                     <p>Strive to improve services to meet expectations of Foreign Investors and cross-border disputes.
                     </p>
-                </div> */}
+                </div>
             </div>
         </div>
-    </motion.section>
+    </section>
 
     {/* PRINCIPLES SECTION */}
     <section className="principles" id="knowledge">
@@ -316,7 +294,7 @@ function App() {
         <div className="features-container">
             <h2 className="section-title">Why to choose us?</h2>
             <div className="features-grid">
-                {/* <div className="feature-card">
+                <div className="feature-card">
                     <div className="feature-icon">🏥</div>
                     <h3>Accessible</h3>
                     <p>Making ADR processes more accessible and transparent to the public. Easy-to-use platform
@@ -349,12 +327,7 @@ function App() {
                     <div className="feature-icon">⚖️</div>
                     <h3>Fair & Transparent</h3>
                     <p>Fairness, transparency, and accountability at every step. Independent and impartial neutrals.</p>
-                </div> */}
-
-                <div>
-                    <img src="assets/3.png" style={{ width: '100%' }} alt="" />
-                    <img src="assets/4.png" style={{ width: '100%' }} alt="" />
-                </div>  
+                </div>
             </div>
         </div>
     </section>
@@ -513,12 +486,7 @@ function App() {
 
 
     {/* for mobileMenu  */}
-    
-    {/* Hidden Google Translate Element */}
-    <div id="google_translate_element" style={{ display: 'none' }}></div>
-    
-    
-    
+
 
 
 
