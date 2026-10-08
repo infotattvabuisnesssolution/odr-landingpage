@@ -99,9 +99,9 @@ function App() {
                 <div className="col-lg-12 col-12 order-2 order-lg-1">
                     <section className="hero" style={{ width: '100%' }}>
                         <div className="hero-content" style={{ width: '100%' }}>
-                            <h1 className="hero-title text-white fw-bold">Online Dispute Resoluion Center</h1>
+                            <h1 className="hero-huge-heading">Online Dispute Resoluion Center</h1>
 
-                            <p className="hero-subtitle text-white fw-bold">
+                            <p className="hero-bright-subtitle">
                                 Utkrusht Kalashrest Vibad Samadhan
                             </p>
 
