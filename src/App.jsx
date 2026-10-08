@@ -116,7 +116,7 @@ function App() {
 
                             <div className="hero-buttons " style={{ marginTop: '31%' }}>
                                 <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
-                                    <button className="btn-primary">
+                                    <button className="hero-custom-btn">
                                         Initiate Dispute Resolution
                                     </button>
                                 </a>
