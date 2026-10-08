@@ -66,7 +66,7 @@ function App() {
                         </li>
 
                         <li className="nav-item">
-                            <a id="initiate-odr-link" className="btn rounded-pill px-4" href="https://odr.gokulanandachaudhurifoundation.com/login" style={{ backgroundColor: 'white' }}>
+                            <a id="initiate-odr-link" className="btn btn-outline-light rounded-pill px-4" href="https://odr.gokulanandachaudhurifoundation.com/login">
                                 Connect
                             </a>
                         </li>
@@ -116,7 +116,7 @@ function App() {
 
                             <div className="hero-buttons " style={{ marginTop: '31%' }}>
                                 <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
-                                    <button className="btn-primary">
+                                    <button className="btn btn-dark rounded-pill px-5 py-3 border border-secondary text-white" style={{ fontWeight: '600' }}>
                                         Initiate Dispute Resolution
                                     </button>
                                 </a>
