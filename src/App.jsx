@@ -59,9 +59,9 @@ function App() {
                                 <i className="bi bi-globe"></i> Language
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                                <li><a className="dropdown-item" href="#" onclick="changeLanguage(event, 'en', 'English')">English</a></li>
-                                <li><a className="dropdown-item" href="#" onclick="changeLanguage(event, 'or', 'ଓଡ଼ିଆ (Odia)')">ଓଡ଼ିଆ (Odia)</a></li>
-                                <li><a className="dropdown-item" href="#" onclick="changeLanguage(event, 'hi', 'हिंदी (Hindi)')">हिंदी (Hindi)</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={(event) => window.changeLanguage && window.changeLanguage(event, 'en', 'English')}>English</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={(event) => window.changeLanguage && window.changeLanguage(event, 'or', 'ଓଡ଼ିଆ (Odia)')}>ଓଡ଼ିଆ (Odia)</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={(event) => window.changeLanguage && window.changeLanguage(event, 'hi', 'हिंदी (Hindi)')}>हिंदी (Hindi)</a></li>
                             </ul>
                         </li>
 
@@ -87,7 +87,7 @@ function App() {
             <div className="row align-items-center">
 
                 {/* Background Video */}
-                <video className="bg-video" autoplay muted loop playsinline>
+                <video className="bg-video" autoPlay muted loop playsInline>
                     <source src="assets/Video Project 3.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -366,7 +366,7 @@ function App() {
                     <p>Fairness, transparency, and accountability at every step. Independent and impartial neutrals.</p>
                 </div> */}
 
-                <div style="">
+                <div>
                     <img src="assets/3.png" style={{ width: '100%' }} alt="" />
                     <img src="assets/4.png" style={{ width: '100%' }} alt="" />
                 </div>  
