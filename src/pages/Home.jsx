@@ -29,16 +29,13 @@ function Home() {
         <div className="video-overlay"></div>
 
         {/* CONTENT */}
-        <div className="hero">
-            <div className="hero-content">
-                <h1>
-                    Online Dispute<br/>Resolution Center
-                </h1>
-                <p className="hero-bright-subtitle">
-                    Utkrusht Kalashrest Vibad Samadhan
-                </p>
+        <div className="hero" style={{ height: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '100%', width: '100%', padding: '20vh 0 5vh 0' }}>
+                
+                {/* Top spacer to push button down below video text */}
+                <div style={{ flex: 1 }}></div>
 
-                <div className="hero-buttons" style={{ marginTop: '5rem' }}>
+                <div className="hero-buttons" style={{ zIndex: 10, marginTop: '10vh' }}>
                     <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
                         <button className="hero-custom-btn">
                             Initiate Dispute Resolution
@@ -46,7 +43,10 @@ function Home() {
                     </a>
                 </div>
                 
-                <h3 style={{ color: '#ffffff', opacity: 0.5, marginTop: '40px', letterSpacing: '2px', fontWeight: 'bold' }}>
+                {/* Bottom spacer to push bottom text down */}
+                <div style={{ flex: 1 }}></div>
+
+                <h3 style={{ color: '#ffffff', opacity: 0.6, letterSpacing: '3px', fontWeight: 'bold', zIndex: 10, marginBottom: '20px' }}>
                     SETTLE CASES QUICKLY
                 </h3>
             </div>
