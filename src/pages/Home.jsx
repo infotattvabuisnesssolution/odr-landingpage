@@ -6,8 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   useEffect(() => {
-    gsap.from(".hero-content", { opacity: 0, y: 50, duration: 1, delay: 0.2 });
-    gsap.from(".why-card", { opacity: 0, y: 30, duration: 0.8, stagger: 0.2, scrollTrigger: ".why-choose" });
+    // gsap.from(".hero-content", { opacity: 0, y: 50, duration: 1, delay: 0.2 });
+    // gsap.from(".why-card", { opacity: 0, y: 30, duration: 0.8, stagger: 0.2, scrollTrigger: ".why-choose" });
   }, []);
 
   return (
