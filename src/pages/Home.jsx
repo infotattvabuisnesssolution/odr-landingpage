@@ -38,7 +38,7 @@ function Home() {
                     Utkrusht Kalashrest Vibad Samadhan
                 </p>
 
-                <div className="hero-buttons">
+                <div className="hero-buttons" style={{ marginTop: '5rem' }}>
                     <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
                         <button className="hero-custom-btn">
                             Initiate Dispute Resolution
