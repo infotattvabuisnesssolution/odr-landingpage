@@ -1894,20 +1894,25 @@ textarea {
 }
 
 .hero-custom-btn {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 12px 30px;
-    font-size: 1.1rem;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding: 8px 24px !important;
+    font-size: 0.95rem !important;
     font-weight: bold;
-    border: 2px solid #1a1a1a;
+    border: 2px solid #000000 !important;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: capitalize;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
 .hero-custom-btn:hover {
-    background-color: #333333;
+    background: #333333 !important;
+    background-color: #333333 !important;
+    border-color: #333333 !important;
     transform: translateY(-2px);
 }
 
