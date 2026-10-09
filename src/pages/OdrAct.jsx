@@ -89,45 +89,7 @@ function OdrAct() {
 
   </section>
   {/*  FOOTER  */}
-  <footer>
-    <div className="footer-content">
-      <div className="footer-section">
-        <h4>About UTKAL ODR</h4>
-        <p style={{}}>Kalashrest Online Dispute Resolution platform providing accessible,
-          cost-effective, and transparent dispute resolution services.</p>
-      </div>
-      <div className="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#">Negotiation</a></li>
-          <li><a href="#">Mediation</a></li>
-          <li><a href="#">Arbitration</a></li>
-          <li><a href="#">Med-Arb</a></li>
-        </ul>
-      </div>
-      <div className="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">How It Works</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Rules</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-      <div className="footer-section">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:info@utkaalodr.com">info@utkaalodr.com</a></li>
-          <li><a href="tel:+91-XXXXXXXXXX">+91-XXXXXXXXXX</a></li>
-          <li>Odisha, India</li>
-        </ul>
-      </div>
-    </div>
-    <div className="footer-bottom">
-      <p>&copy; 2024 UTKAL ODR - Utkrusht Vibad Samadhan. All rights reserved. | Powered by Gokulananda Chaudhuri
-        Foundation</p>
-    </div>
-  </footer>
+  
 
 
     {/*  Hidden Google Translate Element  */}

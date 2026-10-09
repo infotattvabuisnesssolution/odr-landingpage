@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../Blog.css';
 
 function Blogs() {
   return (
@@ -14,7 +15,7 @@ function Blogs() {
     <div className="hero-overlay"></div>
 
     {/*  Back Button  */}
-    <a href="./index.html" className="back-btn">← Back to Home</a>
+    <Link to="/" className="back-btn">← Back to Home</Link>
 
     <div className="container">
       <div className="slider-item">
@@ -314,61 +315,6 @@ function Blogs() {
       <button>Subscribe</button>
     </div>
   </section>
-
-  <footer>
-    <div className="footer-content">
-      <div className="footer-section">
-        <h4>About UTKAL ODR</h4>
-        <p style={{}}>Online Dispute Resolution platform providing accessible,
-          cost-effective, and transparent dispute resolution services.</p>
-      </div>
-      <div className="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#">Negotiation</a></li>
-          <li><a href="#">Mediation</a></li>
-          <li><a href="#">Arbitration</a></li>
-
-        </ul>
-      </div>
-      <div className="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">How It Works</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Rules</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-
-      <div className="footer-section">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:connect@utkalodr.com">connect@utkalodr.com</a></li>
-          <li><a href="tel:+91 91871 02299">+91 91871 02299</a></li>
-
-        </ul>
-      </div>
-      <div className="footer-section">
-        <h4>Our aligned partners</h4>
-        <ul>
-          <li><a href="https://www.legalion.co.in">legalion</a></li>
-          <li><a href="https://infotattvabusinesssolutions.com/">InfoTattva</a></li>
-
-        </ul>
-      </div>
-    </div>
-    <div className="footer-bottom">
-      <p>&copy; 2026 UTKAL ODR - Utkrusht Vibad Samadhan. All rights reserved. | Powered by Gokulananda Chaudhuri
-        Foundation</p>
-    </div>
-  </footer>
-
-
-    {/*  Hidden Google Translate Element  */}
-    <div id="google_translate_element" style={{}}></div>
-    
-    
 
     </div>
   );
