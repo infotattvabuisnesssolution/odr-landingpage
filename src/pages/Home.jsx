@@ -29,13 +29,18 @@ function Home() {
         <div className="video-overlay"></div>
 
         {/* CONTENT */}
-        <div className="hero" style={{ height: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '100%', width: '100%', padding: '20vh 0 5vh 0' }}>
+        <div className="hero" style={{ height: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', zIndex: 10 }}>
+            <div className="hero-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', padding: '15vh 0 5vh 0' }}>
                 
-                {/* Top spacer to push button down below video text */}
-                <div style={{ flex: 1 }}></div>
+                <h1 style={{ fontSize: '4.5rem', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
+                    Online Dispute<br />Resolution Center
+                </h1>
+                
+                <p style={{ fontSize: '1.5rem', fontWeight: 600, color: '#ffffff', marginTop: '15px', letterSpacing: '1px', textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
+                    Utkrusht Kalashrest Vibad Samadhan
+                </p>
 
-                <div className="hero-buttons" style={{ zIndex: 10, marginTop: '10vh' }}>
+                <div className="hero-buttons" style={{ zIndex: 10, marginTop: '8vh' }}>
                     <a id="initiate-odr-link" href="https://odr.gokulanandachaudhurifoundation.com">
                         <button className="hero-custom-btn">
                             Initiate Dispute Resolution

@@ -1910,10 +1910,12 @@ textarea {
 }
 
 .hero-custom-btn:hover {
-    background: #333333 !important;
-    background-color: #333333 !important;
-    border-color: #333333 !important;
-    transform: translateY(-2px);
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 768px) {
