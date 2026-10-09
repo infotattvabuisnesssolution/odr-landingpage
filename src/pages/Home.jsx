@@ -189,33 +189,33 @@ function Home() {
                         <div className="why-grid">
 
 
-                            <a href="./odr-rules.html" className="card-link">
+                            <Link to="/rules" className="card-link">
                                 <div className="why-card">
                                     <img src="assets/our-rules.png" className="icon-box" alt="" />
                                     <div className="content">
 
-                                        <h3>Our Rules</h3>
-                                        <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '20px' }}></i>
+                                        <h3 style={{ color: '#ffffff' }}>Our Rules</h3>
+                                        <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '30px', color: '#ffffff' }}></i>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="./odr-act.html" className="card-link">
+                            </Link>
+                            <Link to="/odr-act" className="card-link">
                                 <div className="why-card">
                                     <img src="assets/odr-act.png" className="icon-box" alt="" />
                                     <div className="content">
 
-                                        <h3>Acts</h3>
-                                        <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '20px' }}></i>
+                                        <h3 style={{ color: '#ffffff' }}>Acts</h3>
+                                        <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '30px', color: '#ffffff' }}></i>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="https://odr.msme.gov.in/#/legal-framework/rules" className="card-link">
+                            </Link>
+                            <a href="https://odr.msme.gov.in/#/legal-framework/rules" className="card-link" target="_blank" rel="noopener noreferrer">
                                 <div className="why-card">
                                     <img src="assets/msme-rules.png" className="icon-box" alt="" />
                                     <div className="content">
 
-                                        <h3>MSME Rules</h3>
-                                        <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '20px' }}></i>
+                                        <h3 style={{ color: '#ffffff' }}>MSME Rules</h3>
+                                        <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '30px', color: '#ffffff' }}></i>
                                     </div>
                                 </div>
                             </a>
