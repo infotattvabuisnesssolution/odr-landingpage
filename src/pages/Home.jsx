@@ -48,12 +48,6 @@ function Home() {
                     </a>
                 </div>
                 
-                {/* Bottom spacer to push bottom text down */}
-                <div style={{ flex: 1 }}></div>
-
-                <h3 style={{ color: '#ffffff', opacity: 0.6, letterSpacing: '3px', fontWeight: 'bold', zIndex: 10, marginBottom: '20px' }}>
-                    SETTLE CASES QUICKLY
-                </h3>
             </div>
         </div>
     </section>
