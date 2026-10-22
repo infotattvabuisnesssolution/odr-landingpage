@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UTKAL ODR - Utkrusht Vibad Samadhan | Online Dispute Resolution</title>
 
@@ -85,6 +85,62 @@
             box-shadow: none !important;
         }
     </style>
+    <script>
+      (function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var langParam = urlParams.get('lang');
+        if (langParam) {
+          var domain = window.location.hostname;
+          if (langParam === 'en') {
+             document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain;
+             document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+             document.cookie = 'googtrans=/en/en; path=/; domain=' + domain;
+             document.cookie = 'googtrans=/en/en; path=/;';
+          } else {
+             var cookieVal = '/en/' + langParam;
+             document.cookie = 'googtrans=' + cookieVal + '; path=/; domain=' + domain;
+             document.cookie = 'googtrans=' + cookieVal + '; path=/;';
+          }
+          urlParams.delete('lang');
+          var newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '') + window.location.hash;
+          window.history.replaceState({}, '', newUrl);
+        }
+
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (link && link.href) {
+            try {
+              var targetUrl = new URL(link.href);
+              var currentUrl = new URL(window.location.href);
+              if (targetUrl.hostname !== currentUrl.hostname && 
+                 (targetUrl.hostname.includes('utkalodr.com') || targetUrl.hostname.includes('gokulanandachaudhurifoundation.com'))) {
+                
+                var currentLang = 'en';
+                var combo = document.querySelector('.goog-te-combo');
+                if (combo && combo.value) {
+                  currentLang = combo.value;
+                } else {
+                  var matches = document.cookie.match(/(?:^|;)\s*googtrans=([^;]*)/g);
+                  if (matches && matches.length > 0) {
+                    var lastMatch = matches[matches.length - 1];
+                    var val = lastMatch.split('=')[1];
+                    if (val) {
+                      var parts = decodeURIComponent(val).split('/');
+                      var langCookie = parts[parts.length - 1];
+                      if (langCookie && langCookie !== 'auto') {
+                        currentLang = langCookie;
+                      }
+                    }
+                  }
+                }
+                targetUrl.searchParams.set('lang', currentLang);
+                link.href = targetUrl.toString();
+              }
+            } catch(err) {}
+          }
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
