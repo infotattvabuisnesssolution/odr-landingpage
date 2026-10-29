@@ -32,8 +32,6 @@ function App() {
       }, 100);
 
       return () => clearTimeout(timer1);
-    
-    
     } else {
       window.scrollTo(0, 0);
     }
