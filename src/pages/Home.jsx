@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  const navigate = useNavigate();
+  const [communicateData, setCommunicateData] = useState({
+    name: "",
+    subject: "",
+    phone: "",
+    email: "",
+  });
+
   useEffect(() => {
     // gsap.from(".hero-content", { opacity: 0, y: 50, duration: 1, delay: 0.2 });
     // gsap.from(".why-card", { opacity: 0, y: 30, duration: 0.8, stagger: 0.2, scrollTrigger: ".why-choose" });
@@ -64,20 +72,35 @@ function Home() {
 
             <div className="why-grid">
 
-                <div className="why-card">
-                    <img src="assets/negotiation.png" className="icon-box" alt="" />
-                    <h3>Online Negotiation</h3>
-                </div>
+                <Link to="/rules#article-7" className="card-link">
+                    <div className="why-card">
+                        <img src="assets/negotiation.png" className="icon-box" alt="Online Negotiation" />
+                        <div className="content">
+                            <h3 style={{ color: '#ffffff' }}>Online Negotiation</h3>
+                            <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '30px', color: '#ffffff' }}></i>
+                        </div>
+                    </div>
+                </Link>
 
-                <div className="why-card">
-                    <img src="assets/mediation.png" className="icon-box" alt="" />
-                    <h3>Online Mediation</h3>
-                </div>
+                <Link to="/rules#article-8" className="card-link">
+                    <div className="why-card">
+                        <img src="assets/mediation.png" className="icon-box" alt="Online Mediation" />
+                        <div className="content">
+                            <h3 style={{ color: '#ffffff' }}>Online Mediation</h3>
+                            <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '30px', color: '#ffffff' }}></i>
+                        </div>
+                    </div>
+                </Link>
 
-                <div className="why-card">
-                    <img src="assets/arbitration.png" className="icon-box" alt="" />
-                    <h3>Online Arbitration</h3>
-                </div>
+                <Link to="/rules#article-9" className="card-link">
+                    <div className="why-card">
+                        <img src="assets/arbitration.png" className="icon-box" alt="Online Arbitration" />
+                        <div className="content">
+                            <h3 style={{ color: '#ffffff' }}>Online Arbitration</h3>
+                            <i className="bi bi-arrow-right-circle-fill" style={{ fontSize: '30px', color: '#ffffff' }}></i>
+                        </div>
+                    </div>
+                </Link>
 
             </div>
         </div>
@@ -126,106 +149,6 @@ function Home() {
                     secure, cost-effective, and transparent mechanism for resolving disputes
                     efficiently through technology-enabled processes.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    {/* PEOPLE & PANEL SECTION */}
-    <section className="people-section" id="people">
-        <div className="people-container">
-            <div className="people-header">
-                <h2 className="section-title">Our People</h2>
-                <p>
-                    Guided by distinguished jurists, accredited neutrals, and the leadership of Gokulananda Chaudhuri Foundation to deliver accessible, institutional dispute resolution.
-                </p>
-            </div>
-
-            {/* Leadership & Advisory Card */}
-            <div className="people-leadership">
-                <div className="people-lead-text">
-                    <h3>Gokulananda Chaudhuri Foundation & Advisory Jurists</h3>
-                    <p>
-                        Rooted in an esteemed legacy of justice and social welfare, the Gokulananda Chaudhuri Foundation champions innovation in dispute resolution. Our advisory council includes veteran advocates, former judicial officers, and academic experts who ensure strict procedural fairness, legal integrity, and modern digital standards across all proceedings.
-                    </p>
-                    <div className="people-badges">
-                        <div className="people-badge-item">
-                            <i className="bi bi-shield-check"></i>
-                            <span>Senior Judicial & High Court Bar Association Guidance</span>
-                        </div>
-                        <div className="people-badge-item">
-                            <i className="bi bi-award"></i>
-                            <span>Strict Institutional Neutrality & Ethical Governance</span>
-                        </div>
-                        <div className="people-badge-item">
-                            <i className="bi bi-diagram-3"></i>
-                            <span>Empaneled Experts Across Commercial, MSME & Civil Domains</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="people-lead-img-wrapper">
-                    <img 
-                        src="/assets/WhatsApp Image 2025-12-23 at 12.08.56 PM.jpeg" 
-                        alt="High Court Bar Association Orissa & Advisory Council" 
-                        className="people-lead-img" 
-                    />
-                    <div className="people-lead-img-caption">
-                        High Court Bar Association Orissa & Advisory Council Symposium
-                    </div>
-                </div>
-            </div>
-
-            {/* Neutrals Panel Grid */}
-            <div className="people-grid">
-                <div className="people-card">
-                    <div className="people-card-icon">
-                        <i className="bi bi-bank"></i>
-                    </div>
-                    <h4>Arbitrators Panel</h4>
-                    <p>
-                        Senior advocates, retired judicial officers, and specialized legal practitioners handling domestic, commercial, construction, and contract disputes with institutional rigor.
-                    </p>
-                    <span className="people-tag">Empaneled Arbitrators</span>
-                </div>
-
-                <div className="people-card">
-                    <div className="people-card-icon">
-                        <i className="bi bi-people-fill"></i>
-                    </div>
-                    <h4>Mediators Panel</h4>
-                    <p>
-                        Certified, empathetic mediators skilled in facilitative, commercial, MSME, family, and online mediation techniques to achieve mutually agreeable settlements without litigation.
-                    </p>
-                    <span className="people-tag">Certified Mediators</span>
-                </div>
-
-                <div className="people-card">
-                    <div className="people-card-icon">
-                        <i className="bi bi-person-badge"></i>
-                    </div>
-                    <h4>Conciliators & Case Managers</h4>
-                    <p>
-                        Dedicated resolution professionals and case administrators ensuring seamless party communications, scheduling, document exchange, and full compliance with ADR rules.
-                    </p>
-                    <span className="people-tag">Secretariat & Management</span>
-                </div>
-            </div>
-
-            {/* Empanelment CTA */}
-            <div className="people-cta-box">
-                <div>
-                    <h4>Are you a qualified Mediator or Arbitrator?</h4>
-                    <p>Join UTKAL ODR’s institutional panel of neutrals and resolve disputes with state-of-the-art digital tools.</p>
-                </div>
-                <a 
-                    href="https://odr.gokulanandachaudhurifoundation.com" 
-                    className="people-cta-btn"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >
-                    <span>Apply for Empanelment</span>
-                    <i className="bi bi-arrow-right"></i>
-                </a>
             </div>
         </div>
     </section>
@@ -386,11 +309,23 @@ function Home() {
             <h2>Let us proceed to resolve the disputes</h2>
 
             <div className="cta-buttons">
-                <a href="#" className="btn-light">Contact Us</a>
-                <a href="https://odr.gokulanandachaudhurifoundation.com" className="btn-light">Join us neutrals</a>
-                <a href="https://odr.gokulanandachaudhurifoundation.com" className="btn-light">Start Now</a>
-
-
+                <Link to="/contact" className="btn-light">Contact Us</Link>
+                <a 
+                    href="https://odr.gokulanandachaudhurifoundation.com/register" 
+                    className="btn-light"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Join us neutrals
+                </a>
+                <a 
+                    href="https://odr.gokulanandachaudhurifoundation.com" 
+                    className="btn-light"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Start Now
+                </a>
             </div>
         </div>
     </section>
@@ -398,7 +333,7 @@ function Home() {
 
     {/* contact part  */}
 
-    <div className="contact-body">
+    <div className="contact-body" id="communicate">
 
         <div className="contact-wrapper">
             <div className="section-title text-white">
@@ -412,52 +347,88 @@ function Home() {
                 <h2>Let’s know about your dispute</h2>
 
 
-                <form action="#" method="post">
+                <form onSubmit={(e) => { e.preventDefault(); navigate("/contact", { state: communicateData }); }}>
                     <div className="form-grid">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter Your Name" required />
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter Your Name"
+                                value={communicateData.name}
+                                onChange={(e) => setCommunicateData(prev => ({ ...prev, name: e.target.value }))}
+                            />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="subject">Types of Dispute</label>
-                            <select id="subject" name="subject" defaultValue="" required>
+                            <select
+                                id="subject"
+                                name="subject"
+                                value={communicateData.subject}
+                                onChange={(e) => setCommunicateData(prev => ({ ...prev, subject: e.target.value }))}
+                            >
                                 <option value="" disabled>Select dispute type</option>
-                                <option value="commercial">Commercial Dispute</option>
-                                <option value="contract">Contract Dispute</option>
-                                <option value="property">Property Dispute</option>
-                                <option value="family">Family / Matrimonial Dispute</option>
-                                <option value="consumer">Consumer Dispute</option>
-                                <option value="employment">Employment / Labour Dispute</option>
-                                <option value="banking">Banking & Finance Dispute</option>
-                                <option value="insurance">Insurance Dispute</option>
-                                <option value="intellectual_property">Intellectual Property Dispute</option>
-                                <option value="other">Other</option>
+                                <option value="Commercial Dispute">Commercial Dispute</option>
+                                <option value="Contract Dispute">Contract Dispute</option>
+                                <option value="Property Dispute">Property Dispute</option>
+                                <option value="Family / Matrimonial Dispute">Family / Matrimonial Dispute</option>
+                                <option value="Consumer Dispute">Consumer Dispute</option>
+                                <option value="Employment / Labour Dispute">Employment / Labour Dispute</option>
+                                <option value="Banking & Finance Dispute">Banking & Finance Dispute</option>
+                                <option value="Insurance Dispute">Insurance Dispute</option>
+                                <option value="Intellectual Property Dispute">Intellectual Property Dispute</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter Your Number" required />
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter Your Number"
+                                value={communicateData.phone}
+                                onChange={(e) => setCommunicateData(prev => ({ ...prev, phone: e.target.value }))}
+                            />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter Your Email" required />
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter Your Email"
+                                value={communicateData.email}
+                                onChange={(e) => setCommunicateData(prev => ({ ...prev, email: e.target.value }))}
+                            />
                         </div>
                     </div>
 
-
-                </form>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                    <Link to="/contact">
-                        <button className="btn-submit" type="button">
-                            More details about your dispute
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+                        <button
+                            className="btn-submit"
+                            type="button"
+                            onClick={() => navigate("/contact", { state: communicateData })}
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '10px',
+                              padding: '14px 32px',
+                              fontSize: '15px',
+                              fontWeight: '700',
+                              cursor: 'pointer',
+                              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                            }}
+                        >
+                            <span>More Details & File Dispute</span>
+                            <span style={{ fontSize: '18px', lineHeight: 1 }}>→</span>
                         </button>
-                    </Link>
-
-
-                </div>
+                    </div>
+                </form>
             </section>
         </div>
     </div>

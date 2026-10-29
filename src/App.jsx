@@ -15,20 +15,25 @@ function App() {
 
   useEffect(() => {
     if (location.hash) {
-      setTimeout(() => {
+      const scrollToTarget = () => {
         const id = location.hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+          return true;
+        }
+        return false;
+      };
+
+      const timer1 = setTimeout(() => {
+        if (!scrollToTarget()) {
+          setTimeout(scrollToTarget, 200);
         }
       }, 100);
-    } else if (location.pathname === '/people') {
-      setTimeout(() => {
-        const element = document.getElementById('people');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+
+      return () => clearTimeout(timer1);
+    
+    
     } else {
       window.scrollTo(0, 0);
     }
@@ -41,7 +46,6 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/people" element={<Home />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/odr-act" element={<OdrAct />} />
           <Route path="/rules" element={<OdrRules />} />
